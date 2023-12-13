@@ -1,0 +1,31 @@
+@host = http://127.0.0.1:5000
+
+#Create
+POST {{host}}/users
+Content-Type: application/json
+
+{
+    "name":"Earl Claro",
+    "email":"earlclaro@gmail.com",
+    "password": "password"
+}
+
+
+#Read the list
+GET {{host}}/users/1
+Content-Type: application/json
+
+
+#Update user
+PUT {{host}}/users/1
+
+    {
+    "name":"Earl Clear",
+    "email":"earlclaro@gmail.com",
+    "password": "password"
+    }
+
+
+#Delete User
+DELETE {{host}}/users/1
+Content-Type: application/json
